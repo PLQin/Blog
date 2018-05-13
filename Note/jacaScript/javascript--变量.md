@@ -4,13 +4,13 @@
 # 变量
 ## 这就是javaScript中的变量
 	ECMA-262的表述是javascript变量与其他编程语言的变量有着很大的区别，javascript的变量是松散的，这个本质也就决定变量他只是在特定时间存放特定值的名称而已。由于他不会向其他语言受变量必须要保存何种数据类型的值的约束。所以它的变量可以在脚本的生命周期更改变量值以及变量的类型。
-	<code>
+<code>
 	var num = 1; //Number
-console.log(typeof num);
-num = '2'; // String
-console.log(typeof num);
-num = true; // 布尔值
-console.log(typeof num); 
+	console.log(typeof num);
+	num = '2'; // String
+	console.log(typeof num);
+	num = true; // 布尔值
+	console.log(typeof num); 
 </code>
 		代码一
 上述代码可以说明了javascript变量本质。会发现在变量名的前面不需要像C、C++一样要在前面就要确定变量的数据类型，而且它会在生命周期中更改变量的数据类型。这就是一个松散的javascript变量。
