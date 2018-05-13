@@ -43,22 +43,22 @@ console.log(obj.name);  // 'xuhh'  说明属性保存下来了
 // 代码三  引用类型创建属性
 ```
 ## 关于变量复制与参数的传递
-在介绍变量复制之前，需要补充一些东西：基本类型(原始值)是不可变的，引用类型是可变的。（用一个例子来进行解释吧，详细的可以去参照javascript权威指南上的解释）
-```js
-// 原始值
-var name = 'xuhh';  // 创建一个变量，值为原始值
-name.toLocaleUpperCase(); // 改变变量的值  值改成大写的
-console.log(name);  // 'xuhh'  值没有发生改变
+ >在介绍变量复制之前，需要补充一些东西：基本类型(原始值)是不可变的，引用类型是可变的。（用一个例子来进行解释吧，详细的可以去参照javascript权威指南上的解释）
+ ```js
+ // 原始值
+ var name = 'xuhh';  // 创建一个变量，值为原始值
+ name.toLocaleUpperCase(); // 改变变量的值  值改成大写的
+ console.log(name);  // 'xuhh'  值没有发生改变
 
-// 对象引用
-var obj = {
-	name: 'xuhh'
-}  // 创建一个变量，值为引用类型
-obj.name = 'stone'; //改变变量值
-console.log(obj.name);  // 'stone'  发生了改变
+ // 对象引用
+ var obj = {
+   name: 'xuhh'
+ }  // 创建一个变量，值为引用类型
+ obj.name = 'stone'; //改变变量值
+ console.log(obj.name);  // 'stone'  发生了改变
 
-// 代码四 基本类型(原始值)是不可变的，引用类型是可变的
-```
+ // 代码四 基本类型(原始值)是不可变的，引用类型是可变的
+ ```
 ### 变量复制
 基本类型：
 ### 参数传递
