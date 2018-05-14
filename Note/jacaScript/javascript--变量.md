@@ -87,6 +87,11 @@ console.log(obj2):  // {name: 'xuhh', value: 10}  // 影响到了obj2中的值
 ### 参数传递
 > 参数传递是一个有趣的东西。我也不知道自己能不能说清楚，感觉现在还是一知半解的。希望能够在这里好好的整理一下
 ## 检测类型
+### typeof
+
+### instanceof
+
+### Object.prototype.toString.call()
 
 
 ### 注解：
