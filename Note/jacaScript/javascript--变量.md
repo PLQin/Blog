@@ -89,7 +89,7 @@ console.log(obj2):  // {name: 'xuhh', value: 10}  // 影响到了obj2中的值
 
 ## 检测类型
 ### typeof
->typeof(https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof)操作符返回的是一个字符串，表示未经计算的操作数的类型。
+>[typeof](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof)操作符返回的是一个字符串，表示未经计算的操作数的类型。
 使用：typrof 需要检测的类型
 上代码
 ```js
