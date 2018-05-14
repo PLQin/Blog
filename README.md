@@ -7,3 +7,6 @@
 学习了这么多时间感觉去写一些笔记以及一些脑图能够进行知识点的梳理，不会一知半解的，通过梳理会发现许多的知识点是相互联系在一起的例如：闭包与垃圾回收机制，event loop与浏览器，继承与原型链......
     
 ## 学习笔记目录
+
+### javaScript
+  [javascript - 变量](https://github.com/XUXHH/Blog/blob/master/Note/jacaScript/javascript--%E5%8F%98%E9%87%8F.md)
