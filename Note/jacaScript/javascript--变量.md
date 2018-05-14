@@ -85,14 +85,57 @@ console.log(obj2):  // {name: 'xuhh', value: 10}  // 影响到了obj2中的值
 ```
 
 ### 参数传递
-> 参数传递是一个有趣的东西。我也不知道自己能不能说清楚，感觉现在还是一知半解的。希望能够在这里好好的整理一下
+> 参数传递是一个有趣的东西。我也不知道自己能不能说清楚，感觉现在还是一知半解的。希望能够在这里好好的整理一下（待更 需要一定时间来消化看的东西以及实际的操作）
+
 ## 检测类型
-### typeof
+### typeof  (https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof)
+>typeof操作符返回的是一个字符串，表示未经计算的操作数的类型。
+使用：typrof 需要检测的类型
+上代码
+```js
+let num = 1, str = 'string', boolean = true, undefineds = undefined, nulls = null, symbol = Symbol('symbol'); // 定义了六个基本类型变量 symbol(ES6新增)
+let obj = {}, fun = function() {}, date = new Date(), reg = /\w/g, arr = [];  // 定义了常见的引用类型变量
 
-### instanceof
+typeof num; // 'number'
+typeof str; // 'string'
+typeof boolean; // 'boolean'
+typeof undefineds; // 'undefined'
+typeof nulls; // 'object'  奇怪的家伙  后面注解会进行初略的解释
+typeof symbol; // 'symbol'
 
+typeof obj; // 'object'
+typeof fun; // 'function'
+typeof date; // 'object'
+typeof reg; // 'object'
+typeof arr; // 'object'
+```
+
+使用场景：适用于判断基本类型（null除外），不适用于判断引用类型（function除外）。
+### instanceof (https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof)
+>instanceof运算符是用来测试一个 对象 在其原型链中是否存在一个构造函数的prototypr属性  返回boolean值
+使用：要检测的类型 instanceof 需要判断的类型构造函数
+```js
+// 在定义一次  好傻的操作
+let num = 1, str = 'string', boolean = true, symbol = Symbol('symbol'); // 定义了六个基本类型变量 symbol(ES6新增)
+let obj = {}, fun = function() {}, date = new Date(), reg = /\w/g, arr = [];  // 定义了常见的引用类型变量
+
+num instanceof Number; // false
+str instanceof String; // false
+boolean instanceof Boolean; // false
+symbol instanceof Symbol; // false
+
+obj instanceof Object; // true
+fun instanceof Function; // true
+date instanceof Date; // true
+reg instanceof Regexp; // true
+arr instanceof Array; // true
+
+```
+
+
+使用场景：定义说的蛮清楚了是用来检测对象的，不适用来检测基本类型。
 ### Object.prototype.toString.call()
-
+> 
 
 ### 注解：
 javaScript是一门动态的弱类型编程语言。
