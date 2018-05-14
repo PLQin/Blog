@@ -91,6 +91,7 @@ console.log(obj2):  // {name: 'xuhh', value: 10}  // 影响到了obj2中的值
 ### 注解：
 javaScript是一门动态的弱类型编程语言。
 如何判断一门语言是否是类型的？
+
 如果一门编程语言支持隐式类型转换：弱类型
 ```js
 // 例如javaScript
