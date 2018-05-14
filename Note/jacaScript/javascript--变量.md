@@ -111,8 +111,8 @@ typeof arr; // 'object'
 ```
 
 使用场景：适用于判断基本类型（null除外），不适用于判断引用类型（function除外）。
-### instanceof (https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof)
->instanceof运算符是用来测试一个 对象 在其原型链中是否存在一个构造函数的prototypr属性  返回boolean值
+### instanceof
+>[instanceof](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof)运算符是用来测试一个 对象 在其原型链中是否存在一个构造函数的prototypr属性  返回boolean值
 使用：要检测的类型 instanceof 需要判断的类型构造函数
 ```js
 // 在定义一次  好傻的操作
@@ -135,8 +135,28 @@ arr instanceof Array; // true
 
 使用场景：定义说的蛮清楚了是用来检测对象的，不适用来检测基本类型。
 ### Object.prototype.toString.call()
-> 
+>可以通过[toString()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) 来获取每个对象的类型。为了每个对象都能通过 Object.prototype.toString() 来检测，需要以 Function.prototype.call() 或者 Function.prototype.apply() 的形式来调用，传递要检查的对象作为第一个参数   返回一个字符串
 
+```js
+// 傻操作又出现了 （笑哭）
+let num = 1, str = 'string', boolean = true, undefineds = undefined, nulls = null, symbol = Symbol('symbol'); // 定义了六个基本类型变量 symbol(ES6新增)
+let obj = {}, fun = function() {}, date = new Date(), reg = /\w/g, arr = [];  // 定义了常见的引用类型变量
+
+let toString = Object.prototype.toString;  // 减少一些代码
+toString.call(num); // '[object Number]'
+toString.call(str); // '[object String]'
+toString.call(boolean); // '[object Boolean]'
+toString.call(undefineds); // '[object Undefined]'
+toString.call(nulls); // '[object Null]'
+toString.call(symbol); // '[object Symbol]'
+toString.call(obj); // '[object Object]'
+toString.call(fun); // '[object Function]'
+toString.call(date); // '[object Date]'
+toString.call(reg); // '[object RegExp]'
+toString.call(arr); // '[object Array]'
+
+``` 
+使用场景：可以再用来检测基本类型与引用类型。
 ### 注解：
 javaScript是一门动态的弱类型编程语言。
 如何判断一门语言是否是类型的？
@@ -166,3 +186,4 @@ str = '0' + num # TypeError: cannot concatenate 'str' and 'int' objects  语法�
 
  >静态类型语言：在编译时期间就要检查数据类型，需要给变量指定数据类型。  例如：C,C++
 
+为什么使用typeof检测null 会是‘object’？
