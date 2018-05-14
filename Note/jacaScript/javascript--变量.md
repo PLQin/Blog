@@ -88,8 +88,8 @@ console.log(obj2):  // {name: 'xuhh', value: 10}  // 影响到了obj2中的值
 > 参数传递是一个有趣的东西。我也不知道自己能不能说清楚，感觉现在还是一知半解的。希望能够在这里好好的整理一下（待更 需要一定时间来消化看的东西以及实际的操作）
 
 ## 检测类型
-### typeof(https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof)
->typeof操作符返回的是一个字符串，表示未经计算的操作数的类型。
+### typeof
+>typeof(https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof)操作符返回的是一个字符串，表示未经计算的操作数的类型。
 使用：typrof 需要检测的类型
 上代码
 ```js
