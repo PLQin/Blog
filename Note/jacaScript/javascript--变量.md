@@ -86,6 +86,14 @@ console.log(obj2):  // {name: 'xuhh', value: 10}  // 影响到了obj2中的值
 
 ### 参数传递
 > 参数传递是一个有趣的东西。我也不知道自己能不能说清楚，感觉现在还是一知半解的。希望能够在这里好好的整理一下（待更 需要一定时间来消化看的东西以及实际的操作）
+[求值策略](https://zh.wikipedia.org/wiki/%E6%B1%82%E5%80%BC%E7%AD%96%E7%95%A5#%E4%BC%A0%E5%85%B1%E4%BA%AB%E5%AF%B9%E8%B1%A1%E8%B0%83%E7%94%A8%EF%BC%88Call_by_sharing%EF%BC%89)上给出解释
+1、ECMAScript中的__所有函数的参数都是按值传递__的？
+高级程序设计底4.1.3中有这么几段话：
+>ECMAScript中的所有函数的参数都是按值传递的。也就是说，把函数外部的值复制给函数内部的参数，就和把值从__一个变量复制到另一个变量一样__。
+
+2、什么是共享传递？
+3、共享传递与按值传递（函数的参数）？
+4、误认为引用类型是引用传递？
 
 ## 检测类型
 ### typeof
@@ -131,8 +139,6 @@ reg instanceof Regexp; // true
 arr instanceof Array; // true
 
 ```
-
-
 使用场景：定义说的蛮清楚了是用来检测对象的，不适用来检测基本类型。
 ### Object.prototype.toString.call()
 >可以通过[toString()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) 来获取每个对象的类型。为了每个对象都能通过 Object.prototype.toString() 来检测，需要以 Function.prototype.call() 或者 Function.prototype.apply() 的形式来调用，传递要检查的对象作为第一个参数   返回一个字符串
